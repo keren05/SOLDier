@@ -1,0 +1,329 @@
+body {
+    background-image: url('img/background.jpg');
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Make the background image fixed when scrolling */
+    overflow-x: hidden;
+}
+
+.marquees-container-ltr {
+    overflow: hidden;  /* Hide overflow content */
+    width: 70%;       /* Full width container */
+    position: relative;
+    background: #fcf8ed; /* Optional: Set a background color */
+    margin-left: 15%;
+    margin-top: 10px;
+    height: 120px;
+    border-radius: 10px;
+}
+
+
+.marquees-content-ltr {
+    display: flex;             /* Flexbox for horizontal layout */
+    gap: 1rem;                 /* Adjust gap between images */
+    animation: scroll-left-to-right 10s linear infinite;
+    white-space: nowrap;       /* Prevent line breaks */
+}
+
+
+.imagex {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+}
+
+/* Keyframes for left to right scroll */
+@keyframes scroll-left-to-right {
+    0% {
+        transform: translateX(-100%); /* Start from left */
+    }
+    100% {
+        transform: translateX(0%);  /* Move to right */
+    }
+}
+
+.marquees-content-ltr:hover {
+    animation-play-state: paused;
+}
+/* Initial state */
+img {
+    opacity: 0; /* Start hidden */
+    transform: translateX(200px); /* Start off-screen to the right */
+    animation: slideIn 0.5s ease forwards; /* Faster slide-in animation */
+}
+
+/* Define the slide-in animation */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(200px); /* Starting point off-screen to the right */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Final position */
+    }
+}
+
+/* Stagger the animations for a cascading effect */
+img.logo1 {
+    animation-delay: 0.1s; /* Delay to stagger */
+}
+
+img.logo2 {
+    animation-delay: 0.2s; /* Delay to stagger */
+}
+
+img.company-logo {
+    animation-delay: 0.05s; /* Slight delay for the company logo */
+}
+
+
+.text-center {
+    text-align: center;
+    margin: 0 50px;
+}
+
+.company-logo {
+    margin-top: 50px; /* Adjust as needed */
+    left: 50%;
+    width: 150px; /* Adjust as needed */
+    height: auto;
+    border-radius: 20%;
+    margin-bottom: 20px;
+}
+
+.heading1{
+    color: #ca5527; /* Change to your desired color */
+    font-family: Sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+
+}
+
+.icon-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.icon-row img {
+    margin: 0 10px; /* Add space between the images */
+}
+.logo1 {
+    width: 80px;  /* Set width */
+    height: 80px;  /* Maintain aspect ratio */
+    border-radius: 5px;
+}
+
+.icon-rows {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.icon-rows img {
+    margin: 0 40px; /* Add space between the images */
+}
+.logo2 {
+    width: 100px;  /* Set width */
+    height: 50px;  /* Maintain aspect ratio */
+    border-radius: 10px;
+}
+.heading2{
+    color:#ca5527; /* Change to your desired color */
+    margin-top: 100px;
+    font-family:  Sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+.logo3 {
+    width: 300px;  /* Set width */
+    height: 300px;  /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin-left: 18%;
+}
+
+.vision-section {
+    display: flex;
+    align-items: center; /* Vertically aligns items */
+    margin-top: 50px;
+
+}
+.vision-section .content {
+    flex-direction: column; /* Stack image and text vertically on smaller screens */
+    text-align: center;
+
+}
+.vision-section p {
+    max-width: 40%; /* Control paragraph width */
+    margin-left: 10%; /* Adds margin between image and text */
+    line-height: 1.6; /* Adjusts line height for better readability */
+    white-space: pre-line; /* Ensures line breaks are respected */
+    font-family:'Times New Roman';
+    font-weight:800;
+    font-size: 20px;
+    color: #5f4130;
+    
+}
+/* Styling for each image */
+.image {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+}
+.marquee-container {
+    width: 70%;
+    overflow: hidden; /* Hide anything outside the container */
+    position: relative;
+    background: #fcf8ed; /* Optional: Set a background color */
+    margin-left: 15%;
+    margin-top: 50px;
+    height: 120px;
+    border-radius: 10px;
+}
+
+/* Marquee content styling */
+.marquee-content {
+    display: flex;
+    gap: 1rem; /* Space between images */
+    animation: scroll 10s linear infinite; /* Adjust duration as needed */
+}
+
+/* Keyframes for the scrolling effect */
+@keyframes scroll {
+    0% {
+        transform: translateX(0); /* Start from initial position */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the end of the content */
+    }
+}
+
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused; /* Pause the animation on hover */
+}
+
+.birthsec{
+    display: flex;
+    align-items: center; /* Vertically aligns items */
+    margin-top: 50px;
+}
+
+.birthsec p {
+    max-width: 40%; /* Control paragraph width */
+    margin-left: 18%; /* Adds margin between image and text */
+    line-height: 1.6; /* Adjusts line height for better readability */
+    white-space: pre-line; /* Ensures line breaks are respected */
+    font-family:'Times New Roman';
+    font-weight:800;
+    font-size: 20px;
+    color: #5f4130;
+}
+
+.logo4{
+    width: 300px;  /* Set width */
+    height: 300px;  /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin-left: 5%;
+}
+
+.logo5{
+    width: 600px;  /* Set width */
+    height: 600px;  /* Maintain aspect ratio */
+    border-radius: 10px;
+    margin-top: 5%;
+}
+
+.center {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Horizontally center items */
+    justify-content: center; /* Vertically center items */
+    height: 100vh; /* Adjust this if you want full screen centering */
+    margin-top: 10%;
+}
+
+/* Styling for the input container */
+.input-container {
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+}
+.input-containerx {
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+}
+
+/* Styling for the input box */
+.input-box {
+    width: 500px; /* Set the width of the input box */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Styling for the submit button */
+.submit-button {
+    padding: 10px 20px;
+    width: 150px;
+    margin-left: 10px; /* Space between the input and button */
+    border: none;
+    background-color: #ca5527;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Hover effect for the button */
+.submit-button:hover {
+    background-color: #b1441c;
+}
+.heading3{
+    color:#ca5527; /* Change to your desired color */
+    margin-top: 200px;
+    font-family:  Sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.chainsec {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center;
+    text-align: center; /* Center the text inside the paragraph */
+    padding: 20px; /* Add some padding for better spacing */
+}
+
+/* Paragraph styling */
+.chainsec p {
+    max-width: 600px; /* Set a max width for the paragraph */
+    line-height: 1.6; /* Adjust line height for readability */
+    margin-bottom: 20px; /* Space below the paragraph */
+}
+
+/* Image styling */
+.logo {
+    width: 100px; /* Adjust as needed */
+    margin-top: 10px; /* Space between the paragraph and image */
+    border-radius: 10px;
+}
+
+.logox {
+    width: 600px;
+    height: 600px; /* Adjust as needed */
+    margin-top: 50px; /* Space between the paragraph and image */
+    border-radius: 10px;
+}
+.heading4{
+    color:#ca5527; /* Change to your desired color */
+    margin-top: 50px;
+    font-family:  Sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+}

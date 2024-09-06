@@ -1,5 +1,5 @@
 body {
-    background-image: url('img/background.jpg');
+    background-color: aliceblue;
     background-size: cover; /* Cover the entire page */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent the image from repeating */
@@ -326,4 +326,82 @@ img.company-logo {
     font-family:  Sans-serif;
     font-size: 40px;
     font-weight: 600;
+}
+.constrained-image {
+    max-width: auto; 
+    max-height: 450; 
+    width: auto;      
+    height: auto;      
+    align-self: auto;
+    border: 0px solid #fffefe;
+    padding-left: 20%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#canvas-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    border: 1px solid #ccc;
+}
+
+#canvas {
+    width: 100%;
+    height: 100%;
+}
+
+#mask {
+    position: absolute;
+    width: 100px;
+    top: 50px;
+    left: 50px;
+    cursor: move;
+}
+
+.mask-panel {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.mask-panel img {
+    width: 80px;
+    margin: 10px 0;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.mask-panel img.selected {
+    border-color: #007bff;
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.controls button {
+    margin: 5px;
+    padding: 10px;
+    background-color: #1479de;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: #0056b3;
+}
+
+#reset-btn{
+    background-color: #d21a1a;
 }
